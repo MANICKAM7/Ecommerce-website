@@ -1,0 +1,193 @@
+.admin-page { padding: 40px 0 80px; }
+.admin-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 30px; gap: 16px; flex-wrap: wrap; }
+.admin-title { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+.admin-subtitle { font-size: 14px; color: var(--text-muted); }
+.admin-nav-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.admin-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.admin-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.admin-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--stat-color);
+}
+.admin-stat-card:hover { border-color: var(--stat-color); transform: translateY(-2px); }
+.admin-stat-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--stat-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--stat-color);
+  flex-shrink: 0;
+}
+.admin-stat-card__info { flex: 1; }
+.admin-stat-card__label { font-size: 12px; color: var(--text-muted); font-weight: 500; display: block; margin-bottom: 4px; }
+.admin-stat-card__value { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; color: var(--text-primary); }
+.admin-stat-card__trend { color: var(--accent); opacity: 0.6; font-size: 18px; }
+
+.admin-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.admin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.admin-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.admin-card__header h2 { font-size: 16px; font-weight: 700; }
+
+.admin-table { padding: 4px 0; }
+.admin-table__head {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.admin-table__row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+  align-items: center;
+  transition: var(--transition);
+}
+.admin-table__row:hover { background: var(--bg-hover); }
+.admin-table__order-num { font-weight: 600; color: var(--primary-light); font-size: 12px; }
+
+.top-products-list { padding: 8px 0; }
+.top-product-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  transition: var(--transition);
+}
+.top-product-item:hover { background: var(--bg-hover); }
+.top-product-item:first-child { border-top: none; }
+.top-product-item__rank { font-size: 13px; font-weight: 800; color: var(--text-muted); min-width: 20px; }
+.top-product-item img { width: 40px; height: 40px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; }
+.top-product-item__info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.top-product-item__name { font-size: 13px; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.top-product-item__price { font-size: 12px; color: var(--text-muted); }
+.top-product-item__sold { font-size: 12px; font-weight: 700; color: var(--accent); }
+
+/* Admin Products/Orders/Users shared styles */
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.admin-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 9px 14px;
+  flex: 1;
+  max-width: 360px;
+}
+.admin-search input { background: none; border: none; outline: none; color: var(--text-primary); font-size: 14px; flex: 1; }
+
+.admin-full-table {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.admin-full-table__head {
+  background: var(--bg-secondary);
+  display: grid;
+  padding: 12px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  gap: 12px;
+}
+.admin-full-table__row {
+  display: grid;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+}
+.admin-full-table__row:hover { background: var(--bg-hover); }
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+.modal__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.modal__title { font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; }
+.modal__form { display: flex; flex-direction: column; gap: 14px; }
+.modal__form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.modal__actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
+
+@media (max-width: 1024px) {
+  .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
+}
